@@ -1,0 +1,84 @@
+.login-bg {
+    /* background: linear-gradient(135deg, #0096e2 50%, #20201e 50%); */
+    background: #20201e;
+}
+
+.shadow-light {
+    box-shadow: 0px 0px 10px 2px #0096e2 !important;
+}
+
+.custom-box {
+    background-color: #20201e;
+    
+}
+
+.btn-main {
+    background-color: #0096e2;
+    color: white;
+}
+
+.bg-main {
+    background-color: #0096e2;
+}
+
+.btn-main:hover {
+    background-color: #027ebc;
+    color: white;
+}
+
+.text-main {
+    color: #0096e2;
+
+}
+.text-main:hover {
+    color: #027ebc;
+}
+
+#snackbar {
+    max-width: 250px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+    border: 1px solid black;
+    visibility: hidden;
+}
+
+#snackbar.show {
+    visibility: visible;
+}
+
+.form-control {
+    background-color: #40403e;
+    border-color: black;
+    color: black;
+}
+
+
+.form-control:focus {
+    background-color: #40403e;
+    color: black;
+}
+
+.form-control::placeholder {
+    color: black;
+}
+
+.border-main {
+    border-color: #0096e2 !important;
+}
+
+.product-card:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    transition: transform ease-in .4s;
+}
+
+
+
