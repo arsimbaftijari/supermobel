@@ -80,5 +80,16 @@
     transition: transform ease-in .4s;
 }
 
+.carousel-img {
+    height: 400px;          
+    object-fit: cover;
+}
+
+@media (min-width: 992px) {
+    .carousel-img {
+        height: 940px;     
+    }
+}
+
 
 
