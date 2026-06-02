@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Super Mobel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="login-bg auth-page">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark shadow sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" width="50px" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+                </li>
+                <li class="nav-item dropdown">
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+    <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="3000">
+                <img src="img/dh1.jpg" class="d-block w-100 carousel-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Modern Kitchen Designs</h5>
+                  <p>Elegant layouts crafted for comfort, style, and functionality.</p>
+                </div>
+          </div>
+      
+          <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/k1.jpg" class="d-block w-100 carousel-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Premium Kitchen Interiors</h5>
+                    <p>High-quality finishes that bring beauty and durability together.</p>
+                </div>
+          </div>
+      
+          <div class="carousel-item" data-bs-interval="3000">
+                <img src="img/k2.jpg" class="d-block w-100 carousel-img" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Smart & Functional Kitchens</h5>
+                  <p>Designed to maximize space, storage, and everyday convenience.</p>
+                </div>
+          </div>
+        </div>
+    
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+    
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+
+
+
+
+
+    <div class="container px-4 py-5" id="custom-cards">
+        <h2 class="text-white pb-2 border-bottom border-main">Our Services</h2>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+
+            <!-- Service 1: Custom Kitchen -->
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/k6.jpg'); background-size: cover;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Custom Kitchens</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="img/logo.png" alt="Company Logo" width="32" height="32" class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <small>Kitchen Projects</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <small>3 Weeks</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: Dresser -->
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/r2.jpg'); background-size: cover;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Dressers & Storage</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="img/logo.png" alt="Company Logo" width="32" height="32" class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <small>Storage Solutions</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <small>2 Weeks</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3: Home Carpentry -->
+            <div class="col">
+                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('img/r3.jpg'); background-size: cover;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Home Carpentry</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="me-auto">
+                                <img src="img/logo.png" alt="Company Logo" width="32" height="32" class="rounded-circle border border-white">
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <small>Custom Furniture</small>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <small>4 Days</small>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid bg-main">
+        <div class="row">
+            <div class="col-12">
+                <div class="container mb-5">
+                    <div class="row my-3">
+                        <h2 class="text-white pb-2 border-bottom border-black my-5">Our Products</h2>
+
+                        <!-- Kitchen 1 -->
+                        <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 product-card">
+                            <div class="card border-0 shadow">
+                                <img src="img/k4.jpg" class="card-img-top w-100" alt="Modern Kitchen Set">
+                                <div class="card-body">
+                                    <h5 class="card-title">Modern Kitchen Set</h5>
+                                    <p class="card-text">A sleek and functional kitchen set designed for efficiency and style, with premium materials that last for years.</p>
+                                    <a href="#" class="btn btn-main">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kitchen 2 -->
+                        <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 product-card">
+                            <div class="card border-0 shadow">
+                                <img src="img/k7.jpg" class="card-img-top w-100" alt="Luxury Kitchen Set">
+                                <div class="card-body">
+                                    <h5 class="card-title">Luxury Kitchen Set</h5>
+                                    <p class="card-text">Combine elegance and practicality with this luxury kitchen set, crafted to enhance both cooking and living spaces.</p>
+                                    <a href="#" class="btn btn-main">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Kitchen 3 -->
+                        <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 product-card">
+                            <div class="card border-0 shadow">
+                                <img src="img/k5.jpg" class="card-img-top w-100" alt="Compact Kitchen Set">
+                                <div class="card-body">
+                                    <h5 class="card-title">Compact Kitchen Set</h5>
+                                    <p class="card-text">Ideal for smaller spaces, this compact kitchen offers smart storage and modern design without compromising style.</p>
+                                    <a href="#" class="btn btn-main">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Dresser -->
+                        <div class="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0 product-card">
+                            <div class="card border-0 shadow">
+                                <img src="img/r1.jpg" class="card-img-top w-100" alt="Modern Dresser">
+                                <div class="card-body">
+                                    <h5 class="card-title">Modern Dresser</h5>
+                                    <p class="card-text">Organize your home with this stylish modern dresser, combining elegant design with practical storage solutions.</p>
+                                    <a href="#" class="btn btn-main">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid contact text-white mb-5">
+        <div class="row">
+            <div class="col">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <div class="container my-5">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-9">
+                                    <h1 class="mb-3 text white">Contact Us</h1>
+                                    <form>
+                                        <div class="row g-3">
+                                        <div class="col-md-6 ">
+                                            <label for="your-name" class="form-label text-white">Your Name</label>
+                                            <input type="text" class="form-control text-white" id="your-name" name="your-name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="your-surname" class="form-label text-white">Your Surname</label>
+                                            <input type="text" class="form-control text-white" id="your-surname" name="your-surname" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="your-email" class="form-label text-white">Your Email</label>
+                                            <input type="email" class="form-control text-white" id="your-email" name="your-email" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="your-subject" class="form-label text-white">Your Subject</label>
+                                            <input type="text" class="form-control text-white" id="your-subject" name="your-subject">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="your-message" class="form-label text-white">Your Message</label>
+                                            <textarea class="form-control " id="your-message" name="your-message" rows="5" required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="row">
+                                            <div class="col-md-6">
+                                                <button data-res="<?php echo $sum; ?>" type="submit" class="btn btn-dark w-100 fw-bold" >Send</button>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 text-white">
+                            <div class="container mt-5">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="row mt-5 d-flex align-items-center">
+                                            <div class="col-2">
+                                                <div class="d-flex align-items-center justify-content-center p-5 border border-main rounded-circle" style="height: 50px;">
+                                                    <i class="fa-solid fa-phone fs-3 text-main"></i>
+                                                </div> 
+                                                
+                                            </div>
+                                            <div class="col-10">
+                                                <a href="tel:+38973206737" href="tel:+38970565030" class="fs-4  text-main text-decoration-none">+389 73 206 737 /<br> +389 70 565 030</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-5 d-flex align-items-center">
+                                            <div class="col-2">
+                                                <div class="d-flex align-items-center justify-content-center p-5 border border-main rounded-circle" style="height: 50px;">
+                                                    <i class="fa-solid fa-envelope fs-3 text-main"></i>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-10">
+                                                <a href="mailto:supermobelabf@gmail.com" class="fs-4 text-main text-decoration-none">supermobelabf@gmail.com</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mt-5 d-flex align-items-center">
+                                            <div class="col-2">
+                                                <div class="d-flex align-items-center justify-content-center p-5 border border-main rounded-circle" style="height: 50px;">
+                                                    <i class="fa-solid fa-map-marker fs-3 text-main"></i>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="col-10">
+                                                <a href="https://www.google.com/maps/dir//Super+Mobel+ABF,+Slatino/@42.0151296,20.9616896,17z/data=!4m17!1m7!3m6!1s0x1353f533e4e7ffe9:0x66f7a4733a6dd765!2sSuper+Mobel+ABF!8m2!3d42.0627191!4d21.0430475!16s%2Fg%2F11j2z9pgqx!4m8!1m0!1m5!1m1!1s0x1353f533e4e7ffe9:0x66f7a4733a6dd765!2m2!1d21.0430377!2d42.0627228!3e0?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D" class="fs-4 text-main text-decoration-none">Slatine, Tetove, 1204</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section style="padding:60px 0; background:#0f0f0f;">
+        <div id="map" style="max-width:1200px; margin:auto; text-align:center;">
+        
+          <h2 style="color:#fff; font-size:32px; margin-bottom:10px;">
+            📍 Our Location
+          </h2>
+          <p style="color:#aaa; margin-bottom:30px;">
+            Find us easily and plan your visit
+          </p>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2962.088468673749!2d21.04047257669504!3d42.06272305383385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1353f533e4e7ffe9%3A0x66f7a4733a6dd765!2sSuper%20Mobel%20ABF!5e0!3m2!1sen!2smk!4v1768517864346!5m2!1sen!2smk"
+           width="100%" height="450" style="border:0;" 
+           allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </div>
+    </section>
+
+    <div class="d-flex justify-content-end m-3 fixed-bottom">
+        <button class="btn btn-main shadow rounded-circle px-2" id="scrollToTop">
+            <i class="fa-solid fa-chevron-up"></i>
+        </button>
+    </div>
+
+
+    <div class="container">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+          <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                  <img src="img/logo.png" width="100px" alt="" height="">
+                </a>
+                <p class="text-white">&copy; 2024 Super Mobel ABF. <br> All rights reserved.</p>
+          </div>
+      
+          <div class="col mb-3">
+          </div>
+      
+          <div class="col mb-3 text-white">
+                <h5>Company</h5>
+                <ul class="nav flex-column text-white">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">About Us</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Our Team</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Careers</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Press</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Contact</a></li>
+                </ul>
+          </div>
+      
+          <div class="col mb-3 text-white">
+                <h5>Resources</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Documentation</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">API Reference</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Tutorials</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Blog</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Updates</a></li>
+            </ul>
+          </div>
+      
+          <div class="col mb-3 text-white">
+                <h5>Support</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Help Center</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Privacy Policy</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Terms of Service</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Report an Issue</a></li>
+                </ul>
+          </div>
+        </footer>
+
+    </div>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>
